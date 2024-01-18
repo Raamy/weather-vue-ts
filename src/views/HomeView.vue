@@ -69,6 +69,7 @@ export default defineComponent({
           this.results = await response.json();
         // Sinon on affiche l'erreur à l'utilisateur
         } else if (response.status === 404) {
+          this.results = null
           this.error_mess = "La ville renseignée est incorrecte.";
         }
       });
